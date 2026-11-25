@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101a2d"><title>CourseFesta | 学習トレーニング</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+  <a class="brand" href="#"><span class="brand-mark">C</span><span>Course<span class="brand-light">Festa</span><small>STUDY TRAINING</small></span></a>
+  <div class="side-label">学習メニュー</div>
+  <button class="nav active" data-view="home"><span>⌂</span> ダッシュボード</button>
+  <button class="nav" data-view="study"><span>▤</span> 問題演習</button>
+  <button class="nav" data-view="review"><span>↻</span> 間違えた問題 <b id="review-count">0</b></button>
+  <button class="nav" data-view="results"><span>▥</span> 学習記録</button>
+  <div class="sidebar-bottom"><div class="status-dot"></div><span>全44問・6章を収録</span></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><div class="eyebrow">COURSEFESTA / LEARNING PORTAL</div><h1 id="page-title">ダッシュボード</h1></div><div class="top-right"><span class="live-dot"></span> 学習データをこの端末に保存中</div></header>
+<section id="view-home" class="view active">
+  <div class="welcome"><div><div class="eyebrow pale">YOUR LEARNING SPACE</div><h2>知識を、<em>自分の力</em>に。</h2><p>全6章・44問。選択問題と記述問題で理解度をチェックしよう。</p><button class="primary" id="start-all">学習をはじめる <span>→</span></button></div><div class="welcome-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="big-c">C</div><div class="float-tag tag-a">44 QUESTIONS</div><div class="float-tag tag-b">6 CHAPTERS</div></div></div>
+  <div class="stats-grid">
+   <article class="stat"><span>解答済み</span><strong id="stat-done">0</strong><small> / 44 問</small><div class="mini-track"><i id="done-bar"></i></div></article>
+   <article class="stat"><span>正答率</span><strong id="stat-rate">—</strong><small>累計</small><div class="mini-track"><i id="rate-bar"></i></div></article>
+   <article class="stat"><span>復習リスト</span><strong id="stat-review">0</strong><small>問</small><div class="mini-track"><i id="review-bar"></i></div></article>
+  </div>
+  <div class="section-head"><div><div class="eyebrow">CHAPTERS</div><h3>章を選んで学習</h3></div><span class="muted">各章の進捗を確認できます</span></div>
+  <div class="chapter-grid" id="chapter-grid"></div>
+</section>
+<section id="view-study" class="view">
+ <div class="study-layout"><div class="study-main">
+  <div class="study-toolbar"><button class="text-btn" id="back-home">← ダッシュボード</button><span id="study-mode-label">全範囲・ランダム</span></div>
+  <div class="progress-line"><div id="session-progress"></div></div>
+  <div class="question-meta"><span id="question-chapter">第1章</span><span id="question-number">QUESTION 01 / 44</span><span class="type-pill" id="question-type">選択問題</span></div>
+  <h2 id="question-text">問題文</h2><p class="question-hint" id="question-hint">最も適切なものを選択してください。</p>
+  <div id="answer-area"></div>
+  <div id="feedback" class="feedback hidden"></div>
+  <div class="question-actions"><button class="secondary" id="skip-btn">あとで解く</button><button class="primary" id="answer-btn">回答する <span>→</span></button><button class="primary hidden" id="next-btn">次の問題へ <span>→</span></button></div>
+ </div><aside class="study-side"><div class="side-card"><div class="eyebrow">SESSION</div><h3 id="session-title">全範囲</h3><div class="session-count"><strong id="session-current">1</strong><span>/</span><span id="session-total">44</span></div><div class="session-track"><i id="session-bar"></i></div><p>回答した問題は学習記録に保存されます。</p></div><div class="side-card"><div class="eyebrow">ANSWER GUIDE</div><h4>回答方法</h4><p>選択問題は選択肢をタップ。記述問題はキーワードを入力してください。複数回答の問題は指定数を選びます。</p></div></aside></div>
+</section>
+<section id="view-review" class="view"><div class="section-head"><div><div class="eyebrow">RETRY YOUR WEAK POINTS</div><h3>間違えた問題</h3></div><button class="primary" id="start-review">復習を開始 →</button></div><div id="review-list" class="list-panel"></div></section>
+<section id="view-results" class="view"><div class="section-head"><div><div class="eyebrow">YOUR PERFORMANCE</div><h3>学習記録</h3></div><button class="secondary" id="reset-data">学習データをリセット</button></div><div class="stats-grid"><article class="stat"><span>解答済み</span><strong id="result-done">0</strong><small>/ 44 問</small></article><article class="stat"><span>正解</span><strong id="result-correct">0</strong><small>問</small></article><article class="stat"><span>正答率</span><strong id="result-rate">—</strong><small>累計</small></article></div><div id="result-chapters" class="result-chapters"></div></section>
+<footer>COURSEFESTA LEARNING PORTAL <span>自主学習用 / 学習状況はこの端末に保存</span></footer>
+</main></div>
+<script src="app.js"></script>
+</body></html>
