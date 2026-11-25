@@ -30,13 +30,13 @@
 </section>
 <section id="view-study" class="view">
  <div class="study-layout"><div class="study-main">
-  <div class="study-toolbar"><button class="text-btn" id="back-home">← ダッシュボード</button><span id="study-mode-label">全範囲・ランダム</span></div>
+  <div class="study-toolbar"><button class="text-btn" id="back-home">← ダッシュボード</button><div class="toolbar-right"><span id="study-mode-label">全範囲・ランダム</span><button class="unknown-btn" id="unknown-btn">わからない（無回答）</button></div></div>
   <div class="progress-line"><div id="session-progress"></div></div>
   <div class="question-meta"><span id="question-chapter">第1章</span><span id="question-number">QUESTION 01 / 44</span><span class="type-pill" id="question-type">選択問題</span></div>
   <h2 id="question-text">問題文</h2><p class="question-hint" id="question-hint">最も適切なものを選択してください。</p>
   <div id="answer-area"></div>
   <div id="feedback" class="feedback hidden"></div>
-  <div class="question-actions"><button class="secondary" id="skip-btn">あとで解く</button><button class="primary" id="answer-btn">回答する <span>→</span></button><button class="primary hidden" id="next-btn">次の問題へ <span>→</span></button></div>
+  <div class="question-actions"><button class="primary" id="answer-btn">回答する <span>→</span></button><button class="primary hidden" id="next-btn">次の問題へ <span>→</span></button></div>
  </div><aside class="study-side"><div class="side-card"><div class="eyebrow">SESSION</div><h3 id="session-title">全範囲</h3><div class="session-count"><strong id="session-current">1</strong><span>/</span><span id="session-total">44</span></div><div class="session-track"><i id="session-bar"></i></div><p>回答した問題は学習記録に保存されます。</p></div><div class="side-card"><div class="eyebrow">ANSWER GUIDE</div><h4>回答方法</h4><p>選択問題は選択肢をタップ。記述問題はキーワードを入力してください。複数回答の問題は指定数を選びます。</p></div></aside></div>
 </section>
 <section id="view-review" class="view"><div class="section-head"><div><div class="eyebrow">RETRY YOUR WEAK POINTS</div><h3>間違えた問題</h3></div><button class="primary" id="start-review">復習を開始 →</button></div><div id="review-list" class="list-panel"></div></section>
