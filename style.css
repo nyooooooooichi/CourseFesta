@@ -52,3 +52,23 @@
 #view-home .practice-grid .practice-arrow{display:block!important;flex:0 0 auto!important;margin-left:auto!important;color:#8b9ac0!important;font-size:21px!important}
 #view-home .practice-grid .practice-card.random{background:linear-gradient(135deg,#f7f9ff,#f1f5ff)!important}
 @media(max-width:720px){#view-home .practice-grid{grid-template-columns:1fr!important;gap:10px!important}#view-home .practice-grid .practice-card{min-height:82px!important;padding:14px 15px!important}}
+
+/* MUSASHI-inspired clear answer feedback */
+.feedback.answer-correct,.feedback.answer-incorrect,.feedback.answer-review{display:block!important;margin-top:20px;padding:20px!important;border-radius:14px!important}
+.feedback.answer-correct{background:#effaf3!important;border:2px solid #35a96b!important;color:#175d38!important}
+.feedback.answer-incorrect{background:#fff4f2!important;border:2px solid #e36b5f!important;color:#81352e!important}
+.feedback.answer-review{background:#f3f6fc!important;border:2px solid #b9c8e4!important}
+.result-status{display:flex;align-items:center;gap:13px;margin-bottom:15px;padding-bottom:14px;border-bottom:1px solid currentColor}
+.result-mark{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:#2caa68;color:#fff;font-size:26px;font-weight:900}
+.answer-incorrect .result-mark{background:#df5d52}
+.result-status b{display:block;font-size:22px;font-weight:900;line-height:1.2}
+.result-status small{display:block;margin-top:4px;font-size:11px;opacity:.8}
+.correct-answer-box{display:flex;flex-direction:column;gap:5px;margin:14px 0;padding:13px 15px;border-radius:10px;background:#fff;border:1px solid #edb7b1}
+.correct-answer-box span{font-size:10px;font-weight:800;color:#a35a52}
+.correct-answer-box strong{font-size:17px;color:#7c2f28;line-height:1.5}
+.option.is-correct-answer{border:2px solid #2eaa69!important;background:#eaf8ef!important;color:#17623b!important;position:relative}
+.option.is-correct-answer:after{content:"✓ 正解";margin-left:auto;padding:4px 8px;border-radius:6px;background:#2eaa69;color:#fff;font-size:10px;font-weight:900;white-space:nowrap}
+.option.is-wrong-answer{border:2px solid #dc6258!important;background:#fff0ee!important;color:#8d352e!important}
+.option.is-wrong-answer:after{content:"あなたの回答";margin-left:auto;padding:4px 7px;border-radius:6px;background:#dc6258;color:#fff;font-size:9px;font-weight:800;white-space:nowrap}
+.option.is-correct-answer input,.option.is-wrong-answer input{accent-color:#27995c}
+@media(max-width:720px){.feedback.answer-correct,.feedback.answer-incorrect,.feedback.answer-review{padding:15px!important}.result-status b{font-size:20px}.correct-answer-box strong{font-size:15px}}
