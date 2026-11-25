@@ -72,3 +72,16 @@
 .option.is-wrong-answer:after{content:"あなたの回答";margin-left:auto;padding:4px 7px;border-radius:6px;background:#dc6258;color:#fff;font-size:9px;font-weight:800;white-space:nowrap}
 .option.is-correct-answer input,.option.is-wrong-answer input{accent-color:#27995c}
 @media(max-width:720px){.feedback.answer-correct,.feedback.answer-incorrect,.feedback.answer-review{padding:15px!important}.result-status b{font-size:20px}.correct-answer-box strong{font-size:15px}}
+
+/* Exam mode */
+.exam-card{grid-column:1/-1!important;background:linear-gradient(110deg,#152c50,#254777)!important;border-color:#294a78!important;color:#fff!important}
+#view-home .practice-grid .exam-card .practice-copy strong{color:#fff!important}
+#view-home .practice-grid .exam-card .practice-copy small{color:#d1def3!important}
+#view-home .practice-grid .exam-card .practice-arrow{color:#dce7ff!important}
+#view-home .practice-grid .exam-card .practice-icon.exam{background:#ffffff20!important;color:#fff!important}
+.exam-result{max-width:680px;margin:40px auto;padding:34px 24px;text-align:center;background:#fff;border:1px solid #e2e8f2;border-radius:20px;box-shadow:0 12px 40px #18345b12}
+.exam-result h2{font-size:28px;margin:10px 0}.exam-score{margin:25px 0 0;color:#1d3762}.exam-score strong{font-size:76px;font-weight:900;line-height:1}.exam-score span{font-size:19px;color:#8290a8}.exam-rate{font-size:28px;font-weight:800;color:#426be8;margin:5px 0 22px}
+.exam-result-detail{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:20px 0}.exam-result-detail span{padding:8px 12px;border-radius:8px;background:#f1f4fa;color:#53627a;font-size:12px}
+.exam-note{font-size:12px;color:#8793a7;line-height:1.8;margin:22px auto;max-width:480px}
+#view-study:has(.exam-result) .study-side{display:none}
+@media(max-width:720px){.exam-result{margin:20px 8px;padding:26px 16px}.exam-score strong{font-size:64px}}
