@@ -85,3 +85,10 @@
 .exam-note{font-size:12px;color:#8793a7;line-height:1.8;margin:22px auto;max-width:480px}
 #view-study:has(.exam-result) .study-side{display:none}
 @media(max-width:720px){.exam-result{margin:20px 8px;padding:26px 16px}.exam-score strong{font-size:64px}}
+
+.study-toolbar-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hint-btn{border:1px solid #d9e4ff!important;background:#eef3ff!important;color:#315ed5!important;border-radius:9px!important;padding:8px 12px!important;font-size:12px!important;font-weight:800!important;transition:background .18s,transform .18s!important}
+.hint-btn:hover{background:#e1eaff!important;transform:translateY(-1px)!important}
+#question-hint{margin:12px 0 16px;padding:13px 15px;border:1px solid #dce6ff;border-left:4px solid #6385ed;border-radius:9px;background:#f4f7ff;color:#334a7c;font-size:13px;line-height:1.75}
+#question-hint.hidden{display:none!important}
+@media(max-width:720px){.study-toolbar-actions{justify-content:flex-end}.hint-btn{padding:8px 10px!important}}
