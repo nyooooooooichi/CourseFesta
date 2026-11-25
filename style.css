@@ -26,3 +26,17 @@
  #study-mode-label{font-size:10px;max-width:55%}
  .unknown-btn{min-height:36px;font-size:11px;padding:7px 10px}
 }
+
+/* Practice mode cards */
+.practice-head{margin-top:34px}
+.practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 34px}
+.practice-card{display:flex;align-items:center;gap:14px;text-align:left;padding:17px 18px;border:1px solid var(--line);border-radius:13px;background:#fff;cursor:pointer;transition:transform .18s,border-color .18s,box-shadow .18s;min-width:0}
+.practice-card:hover{transform:translateY(-2px);border-color:#b8c7ff;box-shadow:0 9px 22px #1e3a6810}
+.practice-icon{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:12px;background:#edf2ff;color:#426cf5;font-size:19px;font-weight:800}
+.practice-icon.written{background:#eaf8f6;color:#269b91}
+.practice-copy{display:flex;flex-direction:column;gap:5px;min-width:0}
+.practice-copy strong{font-size:13px;color:var(--ink)}
+.practice-copy small{font-size:10px;line-height:1.5;color:#929caf}
+.practice-arrow{margin-left:auto;color:#8798c9;font-size:20px}
+.practice-card.random{background:#f9faff}
+@media(max-width:720px){.practice-grid{grid-template-columns:1fr;gap:9px}.practice-card{padding:14px}.practice-head{margin-top:27px}}
