@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#101a2d"><title>CourseFesta | 学習トレーニング</title>
-<link rel="stylesheet" href="style.css?v=mobile-layout-4">
+<link rel="stylesheet" href="style.css?v=answer-flow-5">
 </head>
 <body>
 <div class="app-shell">
@@ -44,12 +44,12 @@
   <h2 id="question-text">問題文</h2><p class="question-hint hidden" id="question-hint">ヒントがここに表示されます。</p>
   <div id="answer-area"></div>
   <div id="feedback" class="feedback hidden"></div>
-  <div class="question-actions"><button class="primary" id="answer-btn">回答する <span>→</span></button><button class="primary hidden" id="next-btn">次の問題へ <span>→</span></button></div>
+  <div class="question-actions"><button type="button" class="primary" id="answer-btn">回答する <span>→</span></button><button type="button" class="primary hidden" id="next-btn">次の問題へ <span>→</span></button></div>
  </div><aside class="study-side"><div class="side-card"><div class="eyebrow">SESSION</div><h3 id="session-title">全範囲</h3><div class="session-count"><strong id="session-current">1</strong><span>/</span><span id="session-total">44</span></div><div class="session-track"><i id="session-bar"></i></div><p>回答した問題は学習記録に保存されます。</p></div><div class="side-card"><div class="eyebrow">ANSWER GUIDE</div><h4>回答方法</h4><p>選択問題は選択肢をタップ。記述問題はキーワードを入力してください。複数回答の問題は指定数を選びます。</p></div></aside></div>
 </section>
 <section id="view-review" class="view"><div class="section-head"><div><div class="eyebrow">RETRY YOUR WEAK POINTS</div><h3>間違えた問題</h3></div><button class="primary" id="start-review">復習を開始 →</button></div><div id="review-list" class="list-panel"></div></section>
 <section id="view-results" class="view"><div class="section-head"><div><div class="eyebrow">YOUR PERFORMANCE</div><h3>学習記録</h3></div><button class="secondary" id="reset-data">学習データをリセット</button></div><div class="stats-grid"><article class="stat"><span>解答済み</span><strong id="result-done">0</strong><small>/ 44 問</small></article><article class="stat"><span>正解</span><strong id="result-correct">0</strong><small>問</small></article><article class="stat"><span>正答率</span><strong id="result-rate">—</strong><small>累計</small></article></div><div id="result-chapters" class="result-chapters"></div></section>
 <footer>COURSEFESTA LEARNING PORTAL <span>自主学習用 / 学習状況はこの端末に保存</span></footer>
 </main></div>
-<script src="app.js?v=mobile-layout-4"></script>
+<script src="app.js?v=answer-flow-5"></script>
 </body></html>
