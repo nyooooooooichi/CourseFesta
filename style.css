@@ -103,3 +103,47 @@
 #question-hint.hidden{display:none!important}
 .question-actions button{min-width:150px;min-height:46px}
 @media(max-width:720px){.study-toolbar{align-items:flex-start}.toolbar-right{width:100%;justify-content:space-between;gap:8px}.study-toolbar-actions{gap:7px}.hint-btn,.unknown-btn{min-height:36px;padding:7px 9px!important;font-size:10px!important}.question-actions button{min-width:0;flex:1}}
+
+
+/* Mobile-first study controls and readable touch targets */
+@media (max-width: 720px) {
+  .app-shell { min-height: 100vh; }
+  .sidebar { position: sticky; top: 0; z-index: 20; }
+  .main { width: 100%; min-width: 0; padding: 0 12px; }
+  .study-layout { display: block; }
+  .study-main { width: 100%; min-width: 0; padding: 18px 14px 22px; border-radius: 13px; }
+  .study-toolbar { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
+  #back-home { align-self: flex-start; min-height: 38px; padding: 8px 2px; }
+  .toolbar-right { width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  #study-mode-label { max-width: 100%; flex: 1 1 100%; font-size: 10px; }
+  .study-toolbar-actions { width: 100%; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; }
+  .study-toolbar-actions button { width: 100%; min-width: 0; min-height: 42px; padding: 9px 6px !important; font-size: 11px !important; }
+  .question-meta { flex-wrap: wrap; gap: 7px; }
+  .question-meta > span:first-child { max-width: 100%; }
+  .study-main h2 { font-size: 17px; line-height: 1.7; overflow-wrap: anywhere; }
+  #question-hint { font-size: 12px; padding: 12px; overflow-wrap: anywhere; }
+  .options { gap: 8px; }
+  .option { min-height: 48px; padding: 12px 10px; gap: 9px; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+  .option input { flex: 0 0 18px; width: 18px; height: 18px; }
+  .option:after { font-size: 9px !important; }
+  .answer-input { min-height: 120px; font-size: 16px; }
+  .feedback { font-size: 12px; overflow-wrap: anywhere; }
+  .question-actions { display: flex; flex-direction: column; gap: 9px; margin-top: 20px; }
+  .question-actions button { width: 100%; min-height: 48px; flex: none; font-size: 13px; }
+  .chapter-grid { grid-template-columns: minmax(0,1fr); }
+  .stats-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .stat { min-width: 0; padding: 11px 8px; }
+  .stat strong { font-size: 20px; }
+  .section-head { align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .review-row { align-items: flex-start; flex-wrap: wrap; }
+  .review-row button { margin-left: 0; }
+  .result-row { grid-template-columns: minmax(0,1fr) auto; }
+}
+@media (max-width: 380px) {
+  .main { padding: 0 9px; }
+  .study-main { padding: 15px 11px 19px; }
+  .study-toolbar-actions button { font-size: 10px !important; }
+  .stats-grid { gap: 6px; }
+  .stat strong { font-size: 18px; }
+  .option { font-size: 11px; }
+}
