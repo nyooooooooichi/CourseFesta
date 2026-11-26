@@ -153,3 +153,52 @@
 #next-btn { position:relative; z-index:5; pointer-events:auto; touch-action:manipulation; cursor:pointer; }
 #next-btn.hidden { display:none !important; }
 #next-btn:not(.hidden) { display:inline-flex !important; align-items:center; justify-content:center; }
+
+
+/* Clear local-save status in the top-right corner */
+.top-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid #e1e9f2;
+  border-radius: 999px;
+  background: #fff;
+  color: #65738a;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.save-status-icon {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  background: #edf3ff;
+  color: #426cf5;
+  font-size: 13px;
+}
+.save-status-label { color: #8a96a9; }
+.top-right .live-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  box-shadow: 0 0 0 3px #54d6a022;
+}
+@media (max-width: 720px) {
+  .top-right {
+    font-size: 10px !important;
+    min-height: 34px;
+    gap: 6px;
+    padding: 6px 9px;
+  }
+  .save-status-icon { width: 19px; height: 19px; font-size: 12px; }
+  .save-status-label { display: none; }
+}
+@media (max-width: 380px) {
+  .topbar { gap: 8px; }
+  .top-right { padding: 5px 7px; gap: 5px; font-size: 9px !important; }
+  .save-status-icon { display: none; }
+}
