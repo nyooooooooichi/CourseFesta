@@ -210,3 +210,23 @@
 #view-home .practice-grid .practice-card.exam-card .practice-copy small{color:#dbe7fb!important}
 #view-home .practice-grid .practice-card.exam-card .practice-arrow{color:#e4edff!important}
 #view-home .practice-grid .practice-card.exam-card:hover{border-color:#7c9de0!important;box-shadow:0 10px 24px rgba(41,75,145,.22)!important}
+
+
+/* Chapter practice mode: top slide-in overlay */
+#chapter-mode-panel.hidden{display:none!important}
+#chapter-mode-panel:not(.hidden){display:block}
+.chapter-overlay-backdrop{position:fixed;inset:0;z-index:1000;display:flex;justify-content:center;align-items:flex-start;padding:clamp(68px,10vh,112px) 22px 28px;background:rgba(10,20,39,.48);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);animation:chapterBackdropIn .2s ease both}
+.chapter-overlay-card{width:min(100%,650px);padding:27px 29px 25px;border:1px solid rgba(220,229,245,.95);border-radius:19px;background:#fff;box-shadow:0 24px 75px rgba(8,20,45,.28);opacity:0;transform:translateY(-28px);transition:opacity .28s ease,transform .32s cubic-bezier(.2,.8,.2,1)}
+.chapter-overlay-card.is-visible{opacity:1;transform:translateY(0)}
+.chapter-overlay-top{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:23px}
+.chapter-overlay-top .eyebrow{color:#6883d7}
+.chapter-overlay-top h3{margin:7px 0 5px;font-size:clamp(17px,3vw,22px);line-height:1.5;color:#1b2b49}
+.chapter-overlay-top p{margin:0;color:#8995aa;font-size:12px}
+.chapter-overlay-close{flex:0 0 38px;width:38px;height:38px;border:1px solid #e3e9f2;border-radius:50%;background:#f7f9fc;color:#66748c;font-size:25px;line-height:1;cursor:pointer;transition:.18s}
+.chapter-overlay-close:hover{background:#edf2ff;border-color:#c5d2f5;color:#355fd7;transform:rotate(90deg)}
+.chapter-mode-grid{margin:0!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.chapter-mode-grid .practice-card{min-height:100px}
+.chapter-mode-grid .practice-card:disabled{opacity:.42;cursor:not-allowed;transform:none;box-shadow:none}
+@keyframes chapterBackdropIn{from{opacity:0}to{opacity:1}}
+@media(max-width:720px){.chapter-overlay-backdrop{padding:58px 12px 20px;align-items:flex-start}.chapter-overlay-card{padding:21px 16px 17px;border-radius:16px}.chapter-overlay-top{gap:10px;margin-bottom:17px}.chapter-overlay-top p{font-size:11px}.chapter-mode-grid{grid-template-columns:1fr!important;gap:9px!important}.chapter-mode-grid .practice-card{min-height:78px;padding:13px}.chapter-overlay-close{width:34px;height:34px;flex-basis:34px;font-size:22px}}
+@media(prefers-reduced-motion:reduce){.chapter-overlay-backdrop,.chapter-overlay-card{animation:none;transition:none}}
