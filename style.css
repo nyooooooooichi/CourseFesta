@@ -202,3 +202,11 @@
   .top-right { padding: 5px 7px; gap: 5px; font-size: 9px !important; }
   .save-status-icon { display: none; }
 }
+
+/* Fix exam card contrast: keep the test-mode card dark and its contents readable */
+#view-home .practice-grid .practice-card.exam-card{background:linear-gradient(110deg,#152c50,#254777)!important;border-color:#294a78!important;color:#fff!important}
+#view-home .practice-grid .practice-card.exam-card .practice-icon.exam{background:rgba(255,255,255,.16)!important;color:#fff!important;border:1px solid rgba(255,255,255,.24)!important}
+#view-home .practice-grid .practice-card.exam-card .practice-copy strong{color:#fff!important}
+#view-home .practice-grid .practice-card.exam-card .practice-copy small{color:#dbe7fb!important}
+#view-home .practice-grid .practice-card.exam-card .practice-arrow{color:#e4edff!important}
+#view-home .practice-grid .practice-card.exam-card:hover{border-color:#7c9de0!important;box-shadow:0 10px 24px rgba(41,75,145,.22)!important}
